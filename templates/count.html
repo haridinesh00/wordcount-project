@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Word Count</title>
+</head>
+<body>
+<a href="{% url 'home' %}">Home</a>
+<h1>No. of words = {{fulltext}}</h1>
+<br>
+<h2>Your Text:</h2>
+<h4>{{orgtext}}<br></h4>
+{% for word,wordcount in sortedwords %}
+<h4>{{word}} - {{wordcount}}</h4>
+{% endfor %} 
+</body>
+</html>
